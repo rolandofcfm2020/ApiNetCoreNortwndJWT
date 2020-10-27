@@ -1,0 +1,12 @@
+Install next dlls
+
+Microsoft.EntityFrameworkCore" Version="3.1.9" 
+Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" 
+Microsoft.EntityFrameworkCore.Tools" Version="3.1.9"
+
+For VS Nuget Console use next command
+Scaffold-DbContext "Server=DESKTOP-HNFHQ6K\SQLEXPRESS;Database=RV_ERP;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir DataAccess -F
+
+For CLI Net Core in CMD or terminal
+dotnet tool install --global dotnet-ef
+dotnet ef dbcontext scaffold "Server=DESKTOP-HNFHQ6K\SQLEXPRESS;Database=RV_ERP;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o DataAccess
